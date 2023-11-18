@@ -42,46 +42,65 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                     HStack {
-                        roundedButton(text: "Alert1") {
+                        roundedButton(text: "Fire") {
                             print("Button tapped!")
                         }
-                        roundedButton(text: "Alert2") {
+                        roundedButton(text: "Lost") {
                             print("Button tapped!")
                         }
-                        roundedButton(text: "Alert3") {
-                            print("Button tapped!")
-                        }
-                    }
-
-                    HStack {
-                        roundedButton(text: "Alert4") {
-                            print("Button tapped!")
-                        }
-                        roundedButton(text: "Alert5") {
-                            print("Button tapped!")
-                        }
-                        roundedButton(text: "Alert6") {
+                        roundedButton(text: "Power Outage") {
                             print("Button tapped!")
                         }
                     }
 
                     HStack {
-                        roundedButton(text: "Alert7") {
+                        roundedButton(text: "Inotoxicated") {
                             print("Button tapped!")
                         }
-                        roundedButton(text: "Alert8") {
+                        roundedButton(text: " Active Shooter") {
                             print("Button tapped!")
                         }
-                        roundedButton(text: "Alert9") {
+                        roundedButton(text: "Car crash") {
                             print("Button tapped!")
                         }
                     }
 
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
+                    HStack {
+                        roundedButton(text: "Head Injury") {
+                            print("Someone has had a head injury")
+                        }
+                        roundedButton(text: "Heart Attack") {
+                            print("Button tapped!")
+                        }
+                        roundedButton(text: "General Injury") {
+                            print("Button tapped!")
+                        }
+                    }
 
+                   
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    HStack{
+                        NavigationLink(destination: ContactsPage()) {
+                            Text("Add Contacts")
+                                .padding()
+                                .background(Color.white)
+                                .foregroundColor(.green)
+                                .cornerRadius(10)
+                        }
+
+                        Button("Log Out"){
+                            //add log out function
+                        }.buttonStyle(.borderedProminent)
+                            .tint(.red)
+                            .font(.headline)
+
+                    }
+                    
+                }
+                
                 }
                 
                 //--------------------------------------------
@@ -95,41 +114,44 @@ struct ContentView: View {
                     
                     }
                 }
-//                VStack {
-//                                NavigationLink(destination: Page1()) {
-//                                    Text("Go to Page 1")
-//                                        .padding()
-//                                        .background(Color.blue)
-//                                        .foregroundColor(.white)
-//                                        .cornerRadius(10)
-//                                }
-//
-//                                NavigationLink(destination: Page2()) {
-//                                    Text("Go to Page 2")
-//                                        .padding()
-//                                        .background(Color.green)
-//                                        .foregroundColor(.white)
-//                                        .cornerRadius(10)
-//                                }
-//                            }
-//                            .navigationTitle("Home")
-            }
+                VStack {
+                                            }
         }
     }
 }
-struct Page1: View {
+struct ContactsPage: View {
     var body: some View {
-        Text("This is Page 1")
-            .navigationTitle("Page 1")
+        ZStack{
+            RadialGradient(stops: [
+                .init(color: .white, location: 0.5),
+                .init(color: .green, location: 0.5)
+            ], center: .top, startRadius: 200, endRadius: 600)
+            .ignoresSafeArea()
+            
+            
+            Text("This is Page 1")
+
+        }
+        
+        
+        
+        
+        
+        
+        
+            .navigationTitle("Add Contacts")
     }
 }
 
-struct Page2: View {
-    var body: some View {
-        Text("This is Page 2")
-            .navigationTitle("Page 2")
-    }
-}
+
+
+
+
+
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

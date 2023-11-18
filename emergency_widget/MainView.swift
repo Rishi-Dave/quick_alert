@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct MainView: View {
+    
     var body: some View {
         TabView{
-            ContentView().tabItem{
-                Label("Menu",systemImage: "line.dash")
-             }
+            Group{
+                ContentView().tabItem{
+                    Label("Menu",systemImage: "line.dash")
+                 } 
+            }.toolbarBackground(.visible, for: .tabBar)
         }
     }
 }
