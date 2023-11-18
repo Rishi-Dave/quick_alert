@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
-
+import Firebase
 @main
 struct emergency_widgetApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginSignupView()
         }
     }
 }
