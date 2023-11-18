@@ -7,18 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F11021632B09233200334235 /* emergency_widgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11021622B09233200334235 /* emergency_widgetApp.swift */; };
-		F11021652B09233200334235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11021642B09233200334235 /* ContentView.swift */; };
-		F11021672B09233300334235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11021662B09233300334235 /* Assets.xcassets */; };
-		F110216A2B09233300334235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11021692B09233300334235 /* Preview Assets.xcassets */; };
+		F132719C2B097584003394C2 /* emergency_widget in Resources */ = {isa = PBXBuildFile; fileRef = F132719B2B097584003394C2 /* emergency_widget */; };
+		F132719E2B097592003394C2 /* widget_extenstion in Resources */ = {isa = PBXBuildFile; fileRef = F132719D2B097592003394C2 /* widget_extenstion */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F110215F2B09233200334235 /* emergency_widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emergency_widget.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F11021622B09233200334235 /* emergency_widgetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emergency_widgetApp.swift; sourceTree = "<group>"; };
-		F11021642B09233200334235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F11021662B09233300334235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F11021692B09233300334235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F132719B2B097584003394C2 /* emergency_widget */ = {isa = PBXFileReference; lastKnownFileType = folder; name = emergency_widget; path = emergency_widget/emergency_widget; sourceTree = "<group>"; };
+		F132719D2B097592003394C2 /* widget_extenstion */ = {isa = PBXFileReference; lastKnownFileType = folder; name = widget_extenstion; path = emergency_widget/emergency_widget/widget_extenstion; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +31,8 @@
 		F11021562B09233200334235 = {
 			isa = PBXGroup;
 			children = (
-				F11021612B09233200334235 /* emergency_widget */,
+				F132719D2B097592003394C2 /* widget_extenstion */,
+				F132719B2B097584003394C2 /* emergency_widget */,
 				F11021602B09233200334235 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,25 +43,6 @@
 				F110215F2B09233200334235 /* emergency_widget.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F11021612B09233200334235 /* emergency_widget */ = {
-			isa = PBXGroup;
-			children = (
-				F11021622B09233200334235 /* emergency_widgetApp.swift */,
-				F11021642B09233200334235 /* ContentView.swift */,
-				F11021662B09233300334235 /* Assets.xcassets */,
-				F11021682B09233300334235 /* Preview Content */,
-			);
-			path = emergency_widget;
-			sourceTree = "<group>";
-		};
-		F11021682B09233300334235 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F11021692B09233300334235 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +103,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F110216A2B09233300334235 /* Preview Assets.xcassets in Resources */,
-				F11021672B09233300334235 /* Assets.xcassets in Resources */,
+				F132719C2B097584003394C2 /* emergency_widget in Resources */,
+				F132719E2B097592003394C2 /* widget_extenstion in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +115,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F11021652B09233200334235 /* ContentView.swift in Sources */,
-				F11021632B09233200334235 /* emergency_widgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
