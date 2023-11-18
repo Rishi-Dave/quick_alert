@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "14297C9F-5863-457E-B658-6D7284676963"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1A8C31E-D0BD-411D-9846-950A65CF2155"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "emergency_widget/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "roundedButton(text:action:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D1A8C31E-D0BD-411D-9846-950A65CF2155 - 2c975a7e2c9d05c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "emergency_widget.ContentView.roundedButton(text: Swift.String, action: () -&gt; ()) -&gt; some"
+                  moduleName = "emergency_widget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atharva/Documents/GitHub/quick_alert/emergency_widget/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "D1A8C31E-D0BD-411D-9846-950A65CF2155 - 6db19086c713063a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in emergency_widget.ContentView.roundedButton(text: Swift.String, action: () -&gt; ()) -&gt; some"
+                  moduleName = "emergency_widget"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atharva/Documents/GitHub/quick_alert/emergency_widget/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
