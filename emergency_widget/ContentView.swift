@@ -8,14 +8,62 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    func roundedButton(text: String, action: @escaping () -> Void) -> some View {
+            return Button(action: action) {
+                Text(text)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.blue)
+                    )
+            }
+            .padding()
         }
-        .padding()
+    var body: some View {
+        NavigationView{
+            VStack {
+                HStack{
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                }
+                HStack{
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                }
+                HStack{
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                    roundedButton(text: "Tap me", action: {
+                                    print("Button tapped!")
+                                })
+                }
+                Spacer();
+            }
+            .navigationTitle("Qyk Alert")
+        }
+        
+        
+       
     }
 }
 
