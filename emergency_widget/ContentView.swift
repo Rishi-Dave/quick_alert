@@ -15,6 +15,7 @@ struct ContentView: View {
             Text(text)
                 .font(.headline)
                 .foregroundColor(.green)
+                .frame(width: 120, height: 150)
                 .padding()
         }
         .frame(width: 120, height: 150)
@@ -104,6 +105,7 @@ struct ContentView: View {
                             .font(.largeTitle.bold())
                             .accessibilityAddTraits(.isHeader)
                             .foregroundColor(.green)
+                    
                     }
                 }
                 //.navigationBarTitle("Qyk Alert")
