@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var message: String = ""
-    @State private var selection: String? = nil
 
     func roundedButton(text: String, action: @escaping () -> Void) -> some View {
         return Button(action: action) {
