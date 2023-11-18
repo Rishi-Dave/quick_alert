@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var message: String = ""
+    @State private var selection: String? = nil
 
     func roundedButton(text: String, action: @escaping () -> Void) -> some View {
         return Button(action: action) {
             Text(text)
                 .font(.headline)
                 .foregroundColor(.green)
-                .frame(width: 120, height: 150)
+                .frame(width: 120, height: 200)
                 .padding()
         }
-        .frame(width: 120, height: 150)
+        .frame(width: 120, height: 200)
         .background(
             RoundedRectangle(cornerRadius: 10)
                             .fill(Color.white) // Set the fill color to white
@@ -37,7 +38,7 @@ struct ContentView: View {
                     .init(color: .green, location: 0.5)
                 ], center: .top, startRadius: 200, endRadius: 600)
                 .ignoresSafeArea()
-
+                
                 VStack {
                     Spacer()
                     HStack {
@@ -76,20 +77,6 @@ struct ContentView: View {
                         }
                     }
 
-                    TextField("Type your message", text: $message)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding()
-                    Button(action: {
-                                    // Handle the send button action here
-                                    print("Sending message: \(message)")
-                                    // You can perform additional actions, such as sending the message to a server or updating a chat view.
-                                }) {
-                                    Text("Send")
-                                        .padding()
-                                        .foregroundColor(.green)
-                                        .background(Color.white)
-                                        .cornerRadius(10)
-                                }
                     Spacer()
                     Spacer()
                     Spacer()
@@ -108,9 +95,39 @@ struct ContentView: View {
                     
                     }
                 }
-                //.navigationBarTitle("Qyk Alert")
+//                VStack {
+//                                NavigationLink(destination: Page1()) {
+//                                    Text("Go to Page 1")
+//                                        .padding()
+//                                        .background(Color.blue)
+//                                        .foregroundColor(.white)
+//                                        .cornerRadius(10)
+//                                }
+//
+//                                NavigationLink(destination: Page2()) {
+//                                    Text("Go to Page 2")
+//                                        .padding()
+//                                        .background(Color.green)
+//                                        .foregroundColor(.white)
+//                                        .cornerRadius(10)
+//                                }
+//                            }
+//                            .navigationTitle("Home")
             }
         }
+    }
+}
+struct Page1: View {
+    var body: some View {
+        Text("This is Page 1")
+            .navigationTitle("Page 1")
+    }
+}
+
+struct Page2: View {
+    var body: some View {
+        Text("This is Page 2")
+            .navigationTitle("Page 2")
     }
 }
 
