@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var isMessageComposePresented = false
     @State var messageText : String
     
+    
     let array = ["I'm in a fire", "Help me I'm Lost", "The power just went out", "I'm intoxicated right now and cannot text, please help", "There's an active shooter and I cannot text, please call for help", "I got into a car crash", "I got a head injury, I might have a concussion", "I'm having a heart attack", "I'm injured"]
     
     func roundedButton(text: String, action: @escaping () -> Void) -> some View {
@@ -49,8 +50,21 @@ struct ContentView: View {
                 .ignoresSafeArea()
                 
                 VStack {
+                    
                     Spacer()
-                    Text("Qyk Alert")
+                    Text("Qyk Alert")/*
+                        .onAppear {
+                            if(enteredText != ""){
+                                self.isMessageComposePresented.toggle()
+                                messageText = "I'm in trouble and cannot text, please help"
+ 
+                            }
+                            
+                        }
+                        */
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented, num: enteredText, message: $messageText)
+                        })
                         .font(.largeTitle.bold())
                         .accessibilityAddTraits(.isHeader)
                         .foregroundColor(.green)
@@ -63,10 +77,7 @@ struct ContentView: View {
                             messageText = array[0]
 
                         }
-                        .sheet(isPresented: $isMessageComposePresented, content: {
-                            
-                            MessageComposeView(isPresented: $isMessageComposePresented, num: enteredText, message: $messageText)
-                        })
+                       
                         
                         roundedButton(text: "Lost") {
                             print("Button tapped!")

@@ -9,15 +9,16 @@ struct WidgetView: View {
     @State private var isMessageComposePresented = false
     
     var body: some View {
-            VStack{
-                Button("Emergency Alert") {
-                    print("hi")
-                }
-                .buttonStyle(.borderedProminent)
-                
+        VStack{
+            Button("Emergency Alert") {
+                print("hi")
             }
-        .widgetBackground(Color.black)
+            .buttonStyle(.borderedProminent)
+        }
+        .containerBackground(.background, for: .widget)
     }
+    
+    
 }
 
 struct WidgetView_Previews: PreviewProvider {
@@ -28,15 +29,5 @@ struct WidgetView_Previews: PreviewProvider {
 
 
 
-extension View {
-    func widgetBackground(_ backgroundView: some View) -> some View {
-        if #available(iOSApplicationExtension 17.0, *) {
-            return containerBackground(for: .widget) {
-                backgroundView
-            }
-        } else {
-            return background(backgroundView)
-        }
-    }
-}
+
 
