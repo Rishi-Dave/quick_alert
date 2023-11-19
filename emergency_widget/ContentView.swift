@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import Contacts
+
 
 struct ContentView: View {
     @State private var message: String = ""
     @State private var selection: String? = nil
-
+    @Binding var text: String
+    
     func roundedButton(text: String, action: @escaping () -> Void) -> some View {
         return Button(action: action) {
             Text(text)
@@ -84,7 +87,7 @@ struct ContentView: View {
                     Spacer()
                     HStack{
                         NavigationLink(destination: ContactsPage()) {
-                            Text("Add Contacts")
+                            Text("Set Number")
                                 .padding()
                                 .background(Color.white)
                                 .foregroundColor(.green)
@@ -119,39 +122,45 @@ struct ContentView: View {
         }
     }
 }
-struct ContactsPage: View {
-    var body: some View {
-        ZStack{
-            RadialGradient(stops: [
-                .init(color: .white, location: 0.5),
-                .init(color: .green, location: 0.5)
-            ], center: .top, startRadius: 200, endRadius: 600)
-            .ignoresSafeArea()
-            
-            
-            Text("This is Page 1")
 
+struct ContactsPage: View {
+    
+    @State private var enteredText: String
+
+    var body: some View {
+        NavigationView {
+            ZStack{
+                RadialGradient(stops: [
+                    .init(color: .white, location: 0.5),
+                    .init(color: .green, location: 0.5)
+                ], center: .top, startRadius: 200, endRadius: 600)
+                .ignoresSafeArea()
+                //--------------------------------------------------------------------------------
+                
+                //Text("This is Page 1")
+                
+                VStack {
+                    TextField("Set Emergency Phone Number", text: $enteredText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .padding(.horizontal)
+                    
+                    Text("You entered: \(enteredText)")
+                        .padding()
+                        .foregroundColor(.blue) // You can customize the text color here
+                    NavigationLink(destination: ContentView(text: $enteredText))
+                }
+                
+                
+                
+                
+                //--------------------------------------------------------------------------------
+                
+            }
         }
-        
-        
-        
-        
-        
-        
-        
-            .navigationTitle("Add Contacts")
+            .navigationTitle("Set Phone Number")
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
