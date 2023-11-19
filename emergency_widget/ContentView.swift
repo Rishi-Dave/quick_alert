@@ -12,7 +12,7 @@ import Contacts
 struct ContentView: View {
     @State private var message: String = ""
     @State private var selection: String? = nil
-    @Binding var text: String
+    @State var enteredText: String
     
     func roundedButton(text: String, action: @escaping () -> Void) -> some View {
         return Button(action: action) {
@@ -86,7 +86,7 @@ struct ContentView: View {
                     Spacer()
                     Spacer()
                     HStack{
-                        NavigationLink(destination: ContactsPage()) {
+                        NavigationLink(destination: ContactsPage(enteredText: enteredText)) {
                             Text("Set Number")
                                 .padding()
                                 .background(Color.white)
@@ -94,11 +94,6 @@ struct ContentView: View {
                                 .cornerRadius(10)
                         }
 
-                        Button("Log Out"){
-                            //add log out function
-                        }.buttonStyle(.borderedProminent)
-                            .tint(.red)
-                            .font(.headline)
 
                     }
                     
@@ -125,7 +120,7 @@ struct ContentView: View {
 
 struct ContactsPage: View {
     
-    @State private var enteredText: String
+    @State var enteredText: String
 
     var body: some View {
         NavigationView {
@@ -148,7 +143,11 @@ struct ContactsPage: View {
                     Text("You entered: \(enteredText)")
                         .padding()
                         .foregroundColor(.blue) // You can customize the text color here
-                    NavigationLink(destination: ContentView(text: $enteredText))
+                    /*
+                    NavigationLink(destination: ContentView()) {
+                        Text("Enter")
+                    }
+                     */
                 }
                 
                 
@@ -164,6 +163,6 @@ struct ContactsPage: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(enteredText:"")
     }
 }
