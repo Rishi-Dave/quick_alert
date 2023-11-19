@@ -18,6 +18,8 @@
             endingLineNumber = "13"
             landmarkName = "ContentView"
             landmarkType = "14">
+            landmarkName = "roundedButton(text:action:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "D1A8C31E-D0BD-411D-9846-950A65CF2155 - 2c975a7e2c9d05c0"

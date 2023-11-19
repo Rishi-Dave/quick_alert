@@ -7,9 +7,13 @@
 
 import SwiftUI
 import MessageUI
+import Contacts
+
 
 struct ContentView: View {
     @State private var message: String = ""
+    @State private var selection: String? = nil
+    @State var enteredText: String
     @State private var isMessageComposePresented = false
     let array = ["I'm in a fire", "Help me I'm Lost", "The power just went out", "I'm intoxicated right now and cannot text, please help", "There's an active shooter and I cannot text, please call for help", "I got into a car crash", "I got a head injury, I might have a concussion", "I'm having a heart attack", "I'm injured"]
     
@@ -131,19 +135,14 @@ struct ContentView: View {
                     Spacer()
                     Spacer()
                     HStack{
-                        NavigationLink(destination: ContactsPage()) {
-                            Text("Add Contacts")
+                        NavigationLink(destination: ContactsPage(enteredText: enteredText)) {
+                            Text("Set Number")
                                 .padding()
                                 .background(Color.white)
                                 .foregroundColor(.green)
                                 .cornerRadius(10)
                         }
 
-                        Button("Log Out"){
-                            //add log out function
-                        }.buttonStyle(.borderedProminent)
-                            .tint(.red)
-                            .font(.headline)
 
                     }
                     
@@ -201,41 +200,50 @@ struct MessageComposeView: UIViewControllerRepresentable {
 
 
 struct ContactsPage: View {
-    var body: some View {
-        ZStack{
-            RadialGradient(stops: [
-                .init(color: .white, location: 0.5),
-                .init(color: .green, location: 0.5)
-            ], center: .top, startRadius: 200, endRadius: 600)
-            .ignoresSafeArea()
-            
-            
-            Text("This is Page 1")
+    
+    @State var enteredText: String
 
+    var body: some View {
+        NavigationView {
+            ZStack{
+                RadialGradient(stops: [
+                    .init(color: .white, location: 0.5),
+                    .init(color: .green, location: 0.5)
+                ], center: .top, startRadius: 200, endRadius: 600)
+                .ignoresSafeArea()
+                //--------------------------------------------------------------------------------
+                
+                //Text("This is Page 1")
+                
+                VStack {
+                    TextField("Set Emergency Phone Number", text: $enteredText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                        .padding(.horizontal)
+                    
+                    Text("You entered: \(enteredText)")
+                        .padding()
+                        .foregroundColor(.blue) // You can customize the text color here
+                    /*
+                    NavigationLink(destination: ContentView()) {
+                        Text("Enter")
+                    }
+                     */
+                }
+                
+                
+                
+                
+                //--------------------------------------------------------------------------------
+                
+            }
         }
-        
-        
-        
-        
-        
-        
-        
-            .navigationTitle("Add Contacts")
+            .navigationTitle("Set Phone Number")
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(enteredText:"")
     }
 }
