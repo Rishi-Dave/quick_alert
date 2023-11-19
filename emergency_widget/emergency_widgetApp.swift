@@ -11,7 +11,7 @@ import SwiftUI
 struct emergency_widgetApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(enteredText: "", messageText: "")
         }
     }
 }

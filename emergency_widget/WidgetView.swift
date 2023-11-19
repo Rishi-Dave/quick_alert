@@ -12,12 +12,9 @@ struct WidgetView: View {
             VStack{
                 Button("Emergency Alert") {
                     print("hi")
-                    self.isMessageComposePresented.toggle()
                 }
                 .buttonStyle(.borderedProminent)
-                .sheet(isPresented: $isMessageComposePresented, content: {
-                    MessageComposeView(isPresented: $isMessageComposePresented,messageBody: "Help please please")
-                })
+                
             }
         .widgetBackground(Color.black)
     }

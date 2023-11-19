@@ -13,8 +13,10 @@ import Contacts
 struct ContentView: View {
     @State private var message: String = ""
     @State private var selection: String? = nil
-    @State var enteredText: String
+    @State var enteredText : String
     @State private var isMessageComposePresented = false
+    @State var messageText : String
+    
     let array = ["I'm in a fire", "Help me I'm Lost", "The power just went out", "I'm intoxicated right now and cannot text, please help", "There's an active shooter and I cannot text, please call for help", "I got into a car crash", "I got a head injury, I might have a concussion", "I'm having a heart attack", "I'm injured"]
     
     func roundedButton(text: String, action: @escaping () -> Void) -> some View {
@@ -37,6 +39,7 @@ struct ContentView: View {
     }
     
     var body: some View {
+        
         NavigationView {
             ZStack {
                 RadialGradient(stops: [
@@ -47,31 +50,42 @@ struct ContentView: View {
                 
                 VStack {
                     Spacer()
+                    Text("Qyk Alert")
+                        .font(.largeTitle.bold())
+                        .accessibilityAddTraits(.isHeader)
+                        .foregroundColor(.green)
+                        .padding(.bottom)
                     HStack {
+                        
                         roundedButton(text: "Fire") {
                             //sendMessage(num: 5108949147, problem: 0)
                             self.isMessageComposePresented.toggle()
+                            messageText = array[0]
 
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented, messageBody: array[0])
+                            
+                            MessageComposeView(isPresented: $isMessageComposePresented, num: enteredText, message: $messageText)
                         })
                         
                         roundedButton(text: "Lost") {
                             print("Button tapped!")
                             self.isMessageComposePresented.toggle()
+                            messageText = array[1]
                             //sendMessage(num: 5108949147, problem: 1)
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented, messageBody: array[1])
+                            MessageComposeView(isPresented: $isMessageComposePresented, num: enteredText, message: $messageText)
                         })
                         roundedButton(text: "Power Outage") {
                             print("Button tapped!")
                             self.isMessageComposePresented.toggle()
+                            messageText = array[2]
                            // sendMessage(num: 5108949147, problem: 2)
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[2])
+                            
+                            MessageComposeView(isPresented: $isMessageComposePresented,num: enteredText,message: $messageText)
                         })
                     }
 
@@ -79,26 +93,29 @@ struct ContentView: View {
                         roundedButton(text: "Inotoxicated") {
                             print("Button tapped!")
                             self.isMessageComposePresented.toggle()
+                            messageText = array[3]
                             //sendMessage(num: 5108949147, problem: 3)
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[3])
+                            MessageComposeView(isPresented: $isMessageComposePresented,num: enteredText,message: $messageText)
                         })
                         roundedButton(text: " Active Shooter") {
                             print("Button tapped!")
                             self.isMessageComposePresented.toggle()
+                            messageText = array[4]
                             //sendMessage(num: 5108949147, problem: 4)
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[4])
+                            MessageComposeView(isPresented: $isMessageComposePresented,num: enteredText,message: $messageText)
                         })
                         roundedButton(text: "Car crash") {
                             print("Button tapped!")
                             self.isMessageComposePresented.toggle()
+                            messageText = array[5]
                             //sendMessage(num: 5108949147, problem: 5)
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented, messageBody: array[5])
+                            MessageComposeView(isPresented: $isMessageComposePresented, num: enteredText,message: $messageText)
                         })
                     }
 
@@ -106,34 +123,32 @@ struct ContentView: View {
                         roundedButton(text: "Head Injury") {
                             print("Someone has had a head injury")
                             self.isMessageComposePresented.toggle()
+                            messageText = array[6]
                             //sendMessage(num: 5108949147, problem: 6)
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented ,messageBody: array[6])
+                            MessageComposeView(isPresented: $isMessageComposePresented ,num: enteredText,message: $messageText)
                         })
                         roundedButton(text: "Heart Attack") {
                             print("Button tapped!")
                             self.isMessageComposePresented.toggle()
+                            messageText = array[7]
                             //sendMessage(num: 5108949147, problem: 7)
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[7])
+                            MessageComposeView(isPresented: $isMessageComposePresented,num: enteredText,message: $messageText)
                         })
                         roundedButton(text: "General Injury") {
                             print("Button tapped!")
                             self.isMessageComposePresented.toggle()
+                            messageText = array[8]
                             //sendMessage(num: 5108949147, problem: 8)
                         }
                         .sheet(isPresented: $isMessageComposePresented, content: {
-                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[8])
+                            MessageComposeView(isPresented: $isMessageComposePresented,num: enteredText,message: $messageText)
                         })
                     }
                     
-                   
-                    Spacer()
-                    Spacer()
-                    Spacer()
-                    Spacer()
                     HStack{
                         NavigationLink(destination: ContactsPage(enteredText: enteredText)) {
                             Text("Set Number")
@@ -142,39 +157,49 @@ struct ContentView: View {
                                 .foregroundColor(.green)
                                 .cornerRadius(10)
                         }
-
+                        
 
                     }
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    
                     
                 }
                 
                 }
                 
                 //--------------------------------------------
+            /*
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .principal) {
-                        Text("Qyk Alert")
-                            .font(.largeTitle.bold())
-                            .accessibilityAddTraits(.isHeader)
-                            .foregroundColor(.green)
+                        
+                .navigationBarHidden(true)
+                
                     
                     }
                 }
+             */
                 VStack {
-                                            }
+                        }
         }
+        .navigationBarBackButtonHidden(true)
+        
+        
     }
 }
 
 struct MessageComposeView: UIViewControllerRepresentable {
     @Binding var isPresented: Bool
-    let messageBody: String
+    let num: String
+    @Binding var message: String
     
     func makeUIViewController(context: Context) -> MFMessageComposeViewController {
         let controller = MFMessageComposeViewController()
-        controller.recipients = ["+123456789"] // Replace with the recipient's phone number
-        controller.body = messageBody
+        controller.recipients = [num] // Replace with the recipient's phone number
+        controller.body = message
         controller.messageComposeDelegate = context.coordinator
         return controller
     }
@@ -216,19 +241,30 @@ struct ContactsPage: View {
                 //Text("This is Page 1")
                 
                 VStack {
+                    Text("Set Phone Number")
+                        .foregroundColor(.green)
                     TextField("Set Emergency Phone Number", text: $enteredText)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
                         .padding(.horizontal)
                     
                     Text("You entered: \(enteredText)")
+                    
                         .padding()
                         .foregroundColor(.blue) // You can customize the text color here
-                    /*
-                    NavigationLink(destination: ContentView()) {
+                    
+                    Button("Save"){
+                        UserDefaults.standard.set(enteredText, forKey: "number")
+                    }
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    NavigationLink(destination: ContentView(enteredText: enteredText, messageText : "" )) {
                         Text("Enter")
                     }
-                     */
+                    .navigationBarBackButtonHidden(true)
+                     
                 }
                 
                 
@@ -238,12 +274,13 @@ struct ContactsPage: View {
                 
             }
         }
-            .navigationTitle("Set Phone Number")
+
+            .navigationBarBackButtonHidden(true)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(enteredText:"")
+        ContentView(enteredText:"", messageText: "")
     }
 }

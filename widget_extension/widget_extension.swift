@@ -44,7 +44,7 @@ struct WidgetViewEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        ContentView()
+        WidgetView()
     }
 }
 
