@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct ContentView: View {
     @State private var message: String = ""
-
+    @State private var isMessageComposePresented = false
+    let array = ["I'm in a fire", "Help me I'm Lost", "The power just went out", "I'm intoxicated right now and cannot text, please help", "There's an active shooter and I cannot text, please call for help", "I got into a car crash", "I got a head injury, I might have a concussion", "I'm having a heart attack", "I'm injured"]
+    
     func roundedButton(text: String, action: @escaping () -> Void) -> some View {
         return Button(action: action) {
             Text(text)
@@ -42,40 +45,86 @@ struct ContentView: View {
                     Spacer()
                     HStack {
                         roundedButton(text: "Fire") {
-                            print("Button tapped!")
+                            //sendMessage(num: 5108949147, problem: 0)
+                            self.isMessageComposePresented.toggle()
+
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented, messageBody: array[0])
+                        })
+                        
                         roundedButton(text: "Lost") {
                             print("Button tapped!")
+                            self.isMessageComposePresented.toggle()
+                            //sendMessage(num: 5108949147, problem: 1)
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented, messageBody: array[1])
+                        })
                         roundedButton(text: "Power Outage") {
                             print("Button tapped!")
+                            self.isMessageComposePresented.toggle()
+                           // sendMessage(num: 5108949147, problem: 2)
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[2])
+                        })
                     }
 
                     HStack {
                         roundedButton(text: "Inotoxicated") {
                             print("Button tapped!")
+                            self.isMessageComposePresented.toggle()
+                            //sendMessage(num: 5108949147, problem: 3)
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[3])
+                        })
                         roundedButton(text: " Active Shooter") {
                             print("Button tapped!")
+                            self.isMessageComposePresented.toggle()
+                            //sendMessage(num: 5108949147, problem: 4)
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[4])
+                        })
                         roundedButton(text: "Car crash") {
                             print("Button tapped!")
+                            self.isMessageComposePresented.toggle()
+                            //sendMessage(num: 5108949147, problem: 5)
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented, messageBody: array[5])
+                        })
                     }
 
                     HStack {
                         roundedButton(text: "Head Injury") {
                             print("Someone has had a head injury")
+                            self.isMessageComposePresented.toggle()
+                            //sendMessage(num: 5108949147, problem: 6)
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented ,messageBody: array[6])
+                        })
                         roundedButton(text: "Heart Attack") {
                             print("Button tapped!")
+                            self.isMessageComposePresented.toggle()
+                            //sendMessage(num: 5108949147, problem: 7)
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[7])
+                        })
                         roundedButton(text: "General Injury") {
                             print("Button tapped!")
+                            self.isMessageComposePresented.toggle()
+                            //sendMessage(num: 5108949147, problem: 8)
                         }
+                        .sheet(isPresented: $isMessageComposePresented, content: {
+                            MessageComposeView(isPresented: $isMessageComposePresented,messageBody: array[8])
+                        })
                     }
-
+                    
                    
                     Spacer()
                     Spacer()
@@ -118,6 +167,39 @@ struct ContentView: View {
         }
     }
 }
+
+struct MessageComposeView: UIViewControllerRepresentable {
+    @Binding var isPresented: Bool
+    let messageBody: String
+    
+    func makeUIViewController(context: Context) -> MFMessageComposeViewController {
+        let controller = MFMessageComposeViewController()
+        controller.recipients = ["+123456789"] // Replace with the recipient's phone number
+        controller.body = messageBody
+        controller.messageComposeDelegate = context.coordinator
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController: MFMessageComposeViewController, context: Context) {}
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(isPresented: $isPresented)
+    }
+
+    class Coordinator: NSObject, MFMessageComposeViewControllerDelegate {
+        @Binding var isPresented: Bool
+
+        init(isPresented: Binding<Bool>) {
+            _isPresented = isPresented
+        }
+
+        func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+            isPresented = false
+        }
+    }
+}
+
+
 struct ContactsPage: View {
     var body: some View {
         ZStack{

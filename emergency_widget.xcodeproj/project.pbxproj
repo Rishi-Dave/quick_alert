@@ -11,7 +11,42 @@
 		F11021652B09233200334235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11021642B09233200334235 /* ContentView.swift */; };
 		F11021672B09233300334235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11021662B09233300334235 /* Assets.xcassets */; };
 		F110216A2B09233300334235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11021692B09233300334235 /* Preview Assets.xcassets */; };
+		F11141132B097F2100876BEE /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11141122B097F2100876BEE /* WidgetView.swift */; };
+		F111411B2B09800200876BEE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F111411A2B09800200876BEE /* WidgetKit.framework */; };
+		F111411D2B09800200876BEE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F111411C2B09800200876BEE /* SwiftUI.framework */; };
+		F11141202B09800200876BEE /* widget_extensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F111411F2B09800200876BEE /* widget_extensionBundle.swift */; };
+		F11141222B09800200876BEE /* widget_extensionLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11141212B09800200876BEE /* widget_extensionLiveActivity.swift */; };
+		F11141242B09800200876BEE /* widget_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11141232B09800200876BEE /* widget_extension.swift */; };
+		F11141262B09800200876BEE /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11141252B09800200876BEE /* AppIntent.swift */; };
+		F11141282B09800300876BEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11141272B09800300876BEE /* Assets.xcassets */; };
+		F111412C2B09800300876BEE /* widget_extensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F11141182B09800200876BEE /* widget_extensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F16B36A32B0981FA00CB9238 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11141122B097F2100876BEE /* WidgetView.swift */; };
+		F1B454452B09931400EB5D7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11021642B09233200334235 /* ContentView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F111412A2B09800300876BEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F11021572B09233200334235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F11141172B09800200876BEE;
+			remoteInfo = widget_extensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F11141302B09800300876BEE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F111412C2B09800300876BEE /* widget_extensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F110215F2B09233200334235 /* emergency_widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emergency_widget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +54,16 @@
 		F11021642B09233200334235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F11021662B09233300334235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F11021692B09233300334235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F11141122B097F2100876BEE /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
+		F11141182B09800200876BEE /* widget_extensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widget_extensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F111411A2B09800200876BEE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F111411C2B09800200876BEE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F111411F2B09800200876BEE /* widget_extensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widget_extensionBundle.swift; sourceTree = "<group>"; };
+		F11141212B09800200876BEE /* widget_extensionLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widget_extensionLiveActivity.swift; sourceTree = "<group>"; };
+		F11141232B09800200876BEE /* widget_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widget_extension.swift; sourceTree = "<group>"; };
+		F11141252B09800200876BEE /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		F11141272B09800300876BEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F11141292B09800300876BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +74,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F11141152B09800200876BEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F111411D2B09800200876BEE /* SwiftUI.framework in Frameworks */,
+				F111411B2B09800200876BEE /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				F11021612B09233200334235 /* emergency_widget */,
+				F111411E2B09800200876BEE /* widget_extension */,
+				F11141192B09800200876BEE /* Frameworks */,
 				F11021602B09233200334235 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				F110215F2B09233200334235 /* emergency_widget.app */,
+				F11141182B09800200876BEE /* widget_extensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +110,7 @@
 			children = (
 				F11021622B09233200334235 /* emergency_widgetApp.swift */,
 				F11021642B09233200334235 /* ContentView.swift */,
+				F11141122B097F2100876BEE /* WidgetView.swift */,
 				F11021662B09233300334235 /* Assets.xcassets */,
 				F11021682B09233300334235 /* Preview Content */,
 			);
@@ -67,6 +125,28 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F11141192B09800200876BEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F111411A2B09800200876BEE /* WidgetKit.framework */,
+				F111411C2B09800200876BEE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F111411E2B09800200876BEE /* widget_extension */ = {
+			isa = PBXGroup;
+			children = (
+				F111411F2B09800200876BEE /* widget_extensionBundle.swift */,
+				F11141212B09800200876BEE /* widget_extensionLiveActivity.swift */,
+				F11141232B09800200876BEE /* widget_extension.swift */,
+				F11141252B09800200876BEE /* AppIntent.swift */,
+				F11141272B09800300876BEE /* Assets.xcassets */,
+				F11141292B09800300876BEE /* Info.plist */,
+			);
+			path = widget_extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +157,34 @@
 				F110215B2B09233200334235 /* Sources */,
 				F110215C2B09233200334235 /* Frameworks */,
 				F110215D2B09233200334235 /* Resources */,
+				F11141302B09800300876BEE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F111412B2B09800300876BEE /* PBXTargetDependency */,
 			);
 			name = emergency_widget;
 			productName = emergency_widget;
 			productReference = F110215F2B09233200334235 /* emergency_widget.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F11141172B09800200876BEE /* widget_extensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F111412D2B09800300876BEE /* Build configuration list for PBXNativeTarget "widget_extensionExtension" */;
+			buildPhases = (
+				F11141142B09800200876BEE /* Sources */,
+				F11141152B09800200876BEE /* Frameworks */,
+				F11141162B09800200876BEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = widget_extensionExtension;
+			productName = widget_extensionExtension;
+			productReference = F11141182B09800200876BEE /* widget_extensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,11 +193,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					F110215E2B09233200334235 = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					F11141172B09800200876BEE = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
@@ -116,6 +218,7 @@
 			projectRoot = "";
 			targets = (
 				F110215E2B09233200334235 /* emergency_widget */,
+				F11141172B09800200876BEE /* widget_extensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +233,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F11141162B09800200876BEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11141282B09800300876BEE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +248,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11141132B097F2100876BEE /* WidgetView.swift in Sources */,
 				F11021652B09233200334235 /* ContentView.swift in Sources */,
 				F11021632B09233200334235 /* emergency_widgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F11141142B09800200876BEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11141242B09800200876BEE /* widget_extension.swift in Sources */,
+				F11141262B09800200876BEE /* AppIntent.swift in Sources */,
+				F1B454452B09931400EB5D7F /* ContentView.swift in Sources */,
+				F11141222B09800200876BEE /* widget_extensionLiveActivity.swift in Sources */,
+				F11141202B09800200876BEE /* widget_extensionBundle.swift in Sources */,
+				F16B36A32B0981FA00CB9238 /* WidgetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F111412B2B09800300876BEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F11141172B09800200876BEE /* widget_extensionExtension */;
+			targetProxy = F111412A2B09800300876BEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F110216B2B09233300334235 /* Debug */ = {
@@ -195,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -262,12 +395,13 @@
 		F110216E2B09233300334235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"emergency_widget/Preview Content\"";
-				DEVELOPMENT_TEAM = HFK5XFXUVM;
+				DEVELOPMENT_TEAM = UB8N79YCW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -275,12 +409,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.dave.rishi.emergency-widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.dave.rishi.qyk-alert";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -291,12 +426,13 @@
 		F110216F2B09233300334235 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"emergency_widget/Preview Content\"";
-				DEVELOPMENT_TEAM = HFK5XFXUVM;
+				DEVELOPMENT_TEAM = UB8N79YCW2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -304,13 +440,79 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.dave.rishi.emergency-widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.dave.rishi.qyk-alert";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F111412E2B09800300876BEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UB8N79YCW2;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget_extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget_extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.dave.rishi.qyk-alert.widget-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F111412F2B09800300876BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UB8N79YCW2;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget_extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget_extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.dave.rishi.qyk-alert.widget-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,6 +536,15 @@
 			buildConfigurations = (
 				F110216E2B09233300334235 /* Debug */,
 				F110216F2B09233300334235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F111412D2B09800300876BEE /* Build configuration list for PBXNativeTarget "widget_extensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F111412E2B09800300876BEE /* Debug */,
+				F111412F2B09800300876BEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
